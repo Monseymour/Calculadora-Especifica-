@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!--meta name="viewport" content="width=device-width, initial-scale=1.0"--> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+ 
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; background-color: hsl(189, 41%, 97%); height: 100vh - ; width: 100vw;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+    <p class="logo">SPLI</br>TTER</p>
+    <form class="conteiner">
+        <div class="janelas">
+            <label for="bill" class="jTitulo"> Comanda (Valor) </label> <p class="aviso esconder">Valor Obrigatório</p>
+            <!-- Valor total da Conta -->
+            <input class="texto jInput" name="gorjeta" id="bill" type="text" placeholder="0.00" onfocusout="verificarCampo1()">
+        </div>
+        <div class="grade">
+            <!-- Calculadora de Gorjeta-->
+             <label> Selecione a Gorjeta % </label>
+             <div class="botoes">
+                 <label class="botao" for="op1">5%
+                 <input type="radio" name="porcentagem" id="op1" value="5"></label>
+                 <label class="botao" for="op2">10%
+                 <input type="radio" name="porcentagem" id="op2" value="10"></label>
+                 <label class="botao" for="op3">15% 
+                 <input type="radio" name="porcentagem" id="op3" value="15"></label>
+                 <label class="botao" for="op4">25% 
+                 <input type="radio" name="porcentagem" id="op4" value="25"></label>
+                 <label class="botao" for="op5"> 50% 
+                 <input type="radio" name="porcentagem" id="op5" value="50"></label>
+                 <input class="texto" name="porcentagem" id="op6" type="number" placeholder="Outro">
+             </div>
+         </div>
+         <div class="janelas">
+             <label for="pessoas" class="jTitulo"> Numero de Clientes </label><p class="aviso esconder">Valor Mínimo (1)</p>
+             <input class="texto jInput" id="pessoas" type="number" placeholder="0" onfocusout="verificarCampo2()" <!--required-->
+         </div>
+         <div class="painel">
+             <div class="pconteudo">
+             <!-- Quantitativo da Gorjeta -->
+             <div class="pconteudos">
+                 <div class="contText">
+                 <h3> Divisão</h3>
+                 <p> / pessoas </p>
+                 </div>
+                 <h2 id="valorPessoas">$ 0.00</h2>
+             </div>
+             <div class="pconteudos">
+                 <div class="contText">
+                 <h3> Total </h3>
+                 <p> / pessoas </p>
+                 </div>
+                 <h2 id="valorTotal">$ 0.00</h2>
+             </div>
+             <button id="limpar" type="reset" onclick="limparPainel()" disabled > Limpar </button>
+             </div>
+         </div>
+    </form>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Monseymour"> @Monseymour</a>.
+  </footer>
+  <script src="./index.js"></script>
+</body>
+              </html>
+                   
