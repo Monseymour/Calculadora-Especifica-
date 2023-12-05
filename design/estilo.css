@@ -1,0 +1,217 @@
+:root{
+/* Strong cyan */
+    --primaria: hsl(172, 67%, 45%);
+/* Very dark cyan*/
+    --cor1: hsl(183, 100%, 15%);
+/* Dark grayish cyan*/
+    --cor2: hsl(186, 14%, 43%);
+/* Grayish cyan*/
+    --cor3: hsl(184, 14%, 56%);
+/* Light grayish cyan*/
+    --cor4: hsl(185, 41%, 84%);
+/* Very light grayish cyan*/
+    --cor5: hsl(189, 41%, 97%);
+}
+/* Reset */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: space mono;
+}
+button{
+    border: none;
+    text-decoration: none;
+}
+input[type=text]{
+    text-decoration: none;
+    width: 100%;
+    color: var(--cor1);
+    padding-right: 10px;
+    border-radius: 5px;
+}
+input[type=number]{
+    text-decoration: none;
+    width: 100%;
+    color: var(--cor1);
+    padding-right: 10px;
+    border-radius: 5px;
+}
+input:focus{
+    outline: solid var(--primaria) 2px;
+}
+::placeholder{
+    color: var(--cor2);
+}
+input[type=radio]{
+    appearance: none;
+    -webkit-appearance: none;
+}
+/* Estilização da Página */
+body{
+    background-color: var(--cor4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo{
+    font-size: 26px;
+    color: var(--cor2);
+    margin: 1.8rem;
+}
+form.conteiner{
+    background-color: white;
+    color: var(--cor2);
+    padding: 30px;
+    border-radius: 30px 30px 30px 30px;
+    display: grid;
+    width: 70%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    margin: 1.8rem;
+    gap: 1.2rem;
+}
+form .janelas{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 60% 40%;
+    
+}
+form .jTitulo{
+    grid-column: 1 / 2;
+}
+form .jInput{
+    grid-column: 1 / span 2;
+}
+form .texto{
+    text-align: right;
+    border: none;
+    background-color: var(--cor5);
+    font-size: 26px;
+}
+#bill{
+    background-image: url("./images/icon-dollar.svg");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+}
+form .aviso{
+    color: red;
+    /* border: blue 2px dotted; */
+    vertical-align: baseline;
+    font-size: 8pt;
+}
+form .aviso.esconder{
+    display: none;
+}
+
+#pessoas{
+    background-image: url("./images/icon-person.svg");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+}
+form .grade{
+    grid-columns: 1 / 2;
+    grid-rows: 2 / 3;
+}
+form .botoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;   
+}
+form .botoes label{
+    background-color: var(--cor1);
+    color: white;
+    text-align: center;
+    padding-left: 15px;
+}
+form .botoes .botao{
+    width: 100%;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 26px;
+    cursor: pointer;
+}
+form .botoes .selecionado{
+    color: var(--cor1);
+    background-color: var(--primaria);
+}
+form .botoes .botao:hover{
+    background-color: var(--cor4);
+    color: var(--cor1);
+}
+label.botao{
+    user-select: none;
+}
+form .painel{
+    grid-column: 2;
+    grid-row: 1 / 4;
+    width: 100%;
+    background-color: var(--cor1);
+    border-radius: 0.8rem;
+    padding: 10%;
+}
+form .painel .pconteudo{
+    color: white;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 40px;
+}
+.pconteudo .pconteudos{ 
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: space-between;
+}
+.pconteudos .contText{
+    font-size: 8pt;
+}
+.pconteudos .contText P{
+    opacity: 0.8;
+}
+.pconteudos h2{
+    width: 60%;
+    text-align: right;
+    color: var(--primaria);
+}
+.pconteudo button{
+    position: relative;
+    left: 0px;
+    botton: 0px;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    font-size: 23px;    
+}
+.pconteudo button:enabled{
+    color: var(--cor1);
+    background-color: var(--primaria);
+}
+.pconteudo button:disabled{
+    color: var(--cor4);
+    background-color: var(--cor3);
+}
+@media (max-width: 800px){
+    body{
+        width: 100vw;
+        height: 100%;
+    }
+    form.conteiner{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 30px 30px 0px 0px;
+        margin: 0;
+    }
+    form .botoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;   
+    }
+    form .botoes .botao:hover{
+    background-color: var(--primaria);
+    color: var(--cor1);
+}
+  }
+               
