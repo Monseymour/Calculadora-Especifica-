@@ -33,7 +33,7 @@
            b.classList.remove('selecionado');
        })
    });
-   valorAvulso.addEventListener("focusout", () => {
+   valorAvulso.addEventListener("input", () => {
    valorSelecionado = valorAvulso.value;
    if(comanda.value != 0 && pessoas.value >= 1){
    calculo()
@@ -53,7 +53,7 @@
     });
    
     // Evento de calculos
-    comanda.addEventListener("focusout", () => {
+    comanda.addEventListener("input", () => {
        if(pessoas.value >= 1 && valorSelecionado != ""){
            calculo()
        }
