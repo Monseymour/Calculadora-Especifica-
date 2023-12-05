@@ -90,7 +90,7 @@ form .texto{
     font-size: 26px;
 }
 #bill{
-    background-image: url("./images/icon-dollar.svg");
+    background-image: url("./design/icon-dollar.svg");
     background-position: 10px 10px;
     background-repeat: no-repeat;
 }
@@ -105,7 +105,7 @@ form .aviso.esconder{
 }
 
 #pessoas{
-    background-image: url("./images/icon-person.svg");
+    background-image: url("./design/icon-person.svg");
     background-position: 10px 10px;
     background-repeat: no-repeat;
 }
