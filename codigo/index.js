@@ -2,7 +2,8 @@
   // Trasnformar em Array os botões para ser  chamado na função 
    const botoes = Array.from(document.querySelectorAll(".botao"));
    const valores = Array.from(document.querySelectorAll(".texto"));
-   
+   const aviso = Array.from(document.querySelectorAll(".aviso"));
+
    const limpeza = document.getElementById("limpar");
    const valorAvulso = document.getElementById("op6");
    const painelP = document.getElementById("valorPessoas");
@@ -20,6 +21,7 @@
         });
         valorAvulso.value = "";
         botao.classList.add("selecionado")
+        limpeza.disabled = false;
         // Pegar o Valor
         valorSelecionado = parseInt(botao.textContent);
         if(comanda.value != 0 && pessoas.value >= 1){
@@ -67,7 +69,6 @@
 
       // Função de Verificar Campos "Bill" e "Pessoas".
   function verificarCampo1() {
-        const aviso = Array.from(document.querySelectorAll(".aviso"));
         if(comanda.value <= 0){
             comanda.style.outline = "red solid 2px";
             aviso[0].classList.remove("esconder");
@@ -78,7 +79,6 @@
     }
     };
     function verificarCampo2() {
-        const aviso = Array.from(document.querySelectorAll(".aviso"));
         if(pessoas.value <= 0){
             pessoas.style.outline = "red solid 2px";
             aviso[1].classList.remove("esconder");
@@ -99,6 +99,11 @@
         });
     valores.forEach(val => {
         val.value = ""
+    });
+    aviso.forEach(alert => {
+        alert.classList.add("esconder");
+        pessoas.style.outline = "";
+        comanda.style.outline = "";
     });
     limpeza.disabled = true
     };
