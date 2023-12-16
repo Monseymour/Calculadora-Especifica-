@@ -14,38 +14,33 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; background-color: hsl(189, 41%, 97%); height: 100vh - ; width: 100vw;}
+    .attribution { font-size: 11px; text-align: center; background-color: hsl(189, 41%, 97%); width: 100vw;}
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-    <p class="logo">SPLI</br>TTER</p>
-    <form class="conteiner">
+  <p class="logo">SPLI</br>TTER</p>
+  <form class="conteiner">
         <div class="janelas">
-            <label for="bill" class="jTitulo"> Comanda (Valor) </label> <p class="aviso esconder">Valor Obrigatório</p>
+            <label for="bill">Valor da Comanda</label> <p class="aviso esconder">Valor Obrigatório</p>
             <!-- Valor total da Conta -->
             <input class="texto jInput" name="gorjeta" id="bill" type="text" placeholder="0.00" onfocusout="verificarCampo1()">
         </div>
         <div class="grade">
             <!-- Calculadora de Gorjeta-->
-             <label> Selecione a Gorjeta % </label>
+             <label>Escolha a Porcentagem</label>
              <div class="botoes">
-                 <label class="botao" for="op1">5%
-                 <input type="radio" name="porcentagem" id="op1" value="5"></label>
-                 <label class="botao" for="op2">10%
-                 <input type="radio" name="porcentagem" id="op2" value="10"></label>
-                 <label class="botao" for="op3">15% 
-                 <input type="radio" name="porcentagem" id="op3" value="15"></label>
-                 <label class="botao" for="op4">25% 
-                 <input type="radio" name="porcentagem" id="op4" value="25"></label>
-                 <label class="botao" for="op5"> 50% 
-                 <input type="radio" name="porcentagem" id="op5" value="50"></label>
-                 <input class="texto" name="porcentagem" id="op6" type="number" placeholder="Outro">
+                 <buttom class="botao" value="5">5%</buttom>
+                 <buttom class="botao" value="10">10%</buttom>
+                 <buttom class="botao" value="15">15%</buttom>
+                 <buttom class="botao" value="25">25%</buttom>
+                 <buttom class="botao" value="50">50%</buttom>
+                 <input class="texto"  id="op6" type="number" placeholder="Outro">
              </div>
          </div>
          <div class="janelas">
              <label for="pessoas" class="jTitulo"> Numero de Clientes </label><p class="aviso esconder">Valor Mínimo (1)</p>
-             <input class="texto jInput" id="pessoas" type="number" placeholder="0" onfocusout="verificarCampo2()" <!--required-->
+             <input class="texto jInput" id="pessoas" type="number" placeholder="0" onfocusout="verificarCampo2()">
          </div>
          <div class="painel">
              <div class="pconteudo">
@@ -69,11 +64,10 @@
          </div>
     </form>
   
-  <footer class="attribution">
+   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.frontendmentor.io/profile/Monseymour"> @Monseymour</a>.
-  </footer>
+    </footer>
   <script src="./codigo/index.js"></script>
 </body>
               </html>
-                   
