@@ -121,6 +121,7 @@ form .botoes .botao{
     padding-top: 5px;
     padding-bottom: 5px;
     cursor: pointer;
+    transition: ease-out 0.5s;
 }
 form .botoes .selecionado{
     color: var(--cor1);
@@ -169,11 +170,15 @@ form .painel .pconteudo{
     border-radius: 5px;
     width: 100%;
     padding: 10px;
-    font-size: 23px;    
+    font-size: 23px;
+    transition: ease-out 0.5s;   
 }
 .pconteudo button:enabled{
     color: var(--cor1);
     background-color: var(--primaria);
+}
+.pconteudo button:enabled:hover{
+    background-color: var(--cor4);
 }
 .pconteudo button:disabled{
     color: var(--cor4);
