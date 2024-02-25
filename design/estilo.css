@@ -50,6 +50,7 @@ body{
     flex-direction: column;
     align-items: center;
     font-size: 24px;
+    width: 100vw;
 }
 .logo{
     color: var(--cor2);
@@ -58,21 +59,20 @@ body{
 }
 form.conteiner{
     background-color: white;
+    width: 50rem;
     color: var(--cor2);
-    padding: 30px;
+    padding: 2rem;
     border-radius: 30px 30px 30px 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
-    width: 60%;
-    margin: 1.8rem;
+    margin-bottom: 1.8rem;
     gap: 1rem;
 }
 form .janelas{
     display: grid;
     text-align: start;
     align-items: center;
-    grid-template-columns: 60% 40%;
     margin-top: 10px;
     margin-bottom: 10px;
 }
